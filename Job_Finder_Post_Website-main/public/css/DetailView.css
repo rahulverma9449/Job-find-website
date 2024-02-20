@@ -1,0 +1,38 @@
+
+.codingNinjaBanner{
+    margin-bottom: -10rem;
+}
+.detailViewBackground{
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    background-color: #ffffff;
+    /* height: 75vh; */
+}
+
+
+.jobHeading{
+    /* margin-top: -1.5rem; */
+    font-size: 2.3rem;
+}
+
+.ApplyButton{
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    background-color: #5176fc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+
+    margin-bottom: 0.5rem;
+}
+.ApplyButton:hover{
+    background-color: #173ab6;
+}
+.postTime{
+    border-radius: 6px;
+    background-color: #198754;
+    color: #fff;
+    padding: 5px 1rem;
+    margin-bottom: 2rem;
+}

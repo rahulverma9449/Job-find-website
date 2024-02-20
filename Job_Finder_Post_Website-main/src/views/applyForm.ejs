@@ -1,0 +1,33 @@
+<div class="container d-flex justify-content-center ">
+    <div class="col-5  mt-4 mainBOx ">
+        <form action="/job/<%= jobId %>/apply" method="post" enctype="multipart/form-data">
+        <div class=" d-flex justify-content-between">
+            <span class="m-3" style="font-size: 2rem; font-weight: normal; color: #198754;">easily</span>
+            <a href="/job/<%= jobId %>"  class="m-4 xCut"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                    class="bi bi-x-lg" viewBox="0 0 16 16">
+                    <path
+                        d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                </svg></a>
+        </div>
+        <div class="line"></div>
+        <div class="d-flex flex-column align-items-center" style="height: 59vh">
+            <div class="formBox my-4 mx-5 d-flex flex-column align-items-start ">
+                <p class="m-2" style="font-size: 1.6rem; font-weight: 300;">apply in less than 1 minute</p>
+                <div class="m-2 d-flex align-items-center " ><Span class="firstPart">Name </Span> <input
+                        class="secondPart" type="text" placeholder="enter your name" name="name" id="name" required></div>
+                <div class="m-2 d-flex align-items-center"><span class="firstPart">Email</span> <input
+                        class="secondPart" style="width: 110%;" type="email" placeholder="enter your email" name="email" id="email" required></div>
+                <div class="m-2 d-flex align-items-center"><span class="firstPart" >Contact</span> <input
+                        class="secondPart" type="tel" style="width: 70%;" placeholder="+91 ---- -- ----" name="contact" id="contact" required></div>
+                <div class=" m-2 d-flex flex-row"><span class="firstPart">Resume</span> <input class="secondPart" style="width: 63%;" type="file" name="url" id="url" accept="application/pdf" required>
+                </div>
+                <button class=" mx-2   btn btn-primary" style="overflow: hidden;">Submit</button>
+            </div>
+        </div>
+
+       
+
+        
+        </form>
+    </div>
+</div>

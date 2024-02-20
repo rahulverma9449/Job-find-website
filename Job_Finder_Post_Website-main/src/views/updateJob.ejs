@@ -1,0 +1,123 @@
+<div class="d-flex justify-content-center" style="background-color: transparent;">
+    <div class="postJobBox col-6 my-3 px-4 d-flex flex-column align-items-center">
+        <div style="font-size: 2.5rem; font-weight: normal;">Update Job</div>
+        <form action="/job/update/<%=job.id%>" method="post">
+            <input type="text" name="id" id="id" hidden value="<%=job.id%>">
+            <div class="my-1 container-fluid  fs-5" style="   font-weight: normal;">
+                <select class="p-2 outlineClass" name="jobCat" id="jobCat" style="width: 100%; border-radius: 10px;"
+                    required>
+                    <option value="<%= job.techType %>" disabled selected>Select a job</option>
+                    <option value="Tech">Tech</option>
+                    <option value="NonTech">Non-Tech</option>
+                </select>
+            </div>
+            <div class="my-2 container-fluid  fs-5" style=" font-weight: normal;">
+                <select class="p-2 outlineClass" name="jobDesign" id="jobDesign" required
+                    style="width: 100%;  border-radius: 10px;">
+                    <option value="<%= job.tech %>" disabled selected>Select job designation</option>
+                    <option value="SDE">SDE</option>
+                    <option value="HR">HR</option>
+                    <option value="DevOps">DevOps</option>
+                    <option value="MERN Developer">MERN Developer</option>
+                    <option value="MEAN Developer">MEAN Developer</option>
+                    <option value="Java Developer">Java Developer</option>
+                    <option value="Front-End Developer">Front-End Developer</option>
+                    <option value="Backend-End Developer">Backend-End Developer</option>
+                    <option value="Full-Stack Developer">Full-Stack Developer</option>
+                </select>
+            </div>
+            <div class="container  fs-5 ">
+                <label for="location" class="my-2">Enter Job location</label>
+                <input class="container-fluid p-2 border-1 rounded-2 outlineClass" type="text" name="location"
+                    id="location" value="<%= job.location %>" required>
+            </div>
+            <div class=" my-2 container-fluid d-flex  ">
+                <div class="col-3 border border-1 rounded-start fs-5 p-2">Company Name</div>
+                <input class="container-fluid border  border-1 rounded-end fs-5  p-2 outlineClass" type="text"
+                    name="companyName" id="companyName" value="<%= job.orgName %>" required>
+
+            </div>
+
+            <div class="container-fluid d-flex align-items-center">
+                <input class="col-3 border border-1 rounded-start  fs-4 px-3 py-2 outlineClass"
+                    placeholder="enter salary" type="text" name="salary" id="salary"
+                    value="<%= job.salary.first%> - <%= job.salary.first%> lpa" required><span
+                    class="col-3 fs-4 border border-1  px-2 py-2">Total Positions</span><input
+                    class="container-fluid fs-4 px-3 py-2 border border-1 rounded-end outlineClass" type="text"
+                    name="numberOfOpeningins" id="numberOfOpeningins" placeholder="total no. of openings"
+                    value="<%= job.numberOfOpenings %>" required>
+            </div>
+            <div class="container-fluid my-3  d-flex  ">
+                <div class="col-5 fs-6">
+                    <div style="height: 15vh;"
+                        class="d-flex flex-column overflow-auto border border-1 rounded-start px-2">
+                        <select class="outlineClass border-0" multiple size="6" name="skillsReq" id="skillsReq" required>
+                            <option disabled>Select skills required for this job</option>
+                                <option>Java</option>
+                                <option>C++</option>
+                                <option>Python</option>
+                                <option>Algorithms</option>
+                                <option>Data Structures</option>
+                                <option>Database Design</option>
+                                <option>Communication Skills</option>
+                                <option>Talent Acquisition</option>
+                                <option>Employee Relations</option>
+                                <option>HR Policies</option>
+                                <option>Conflict Resolution</option>
+                                <option>Performance Management</option>\
+                                <option>Linux Administration</option>
+                                <option>Containerization (Docker)</option>
+                                <option>Continuous Integration/Continuous Deployment (CI/CD)</option>
+                                <option>Infrastructure as Code (IaC)</option>
+                                <option>Scripting (e.g., Bash, Python)</option>
+                                <option>Monitoring and Logging Tools</option>
+                                <option>MongoDB</option>
+                                <option>Express.js</option>
+                                <option>React.js</option>
+                                <option>Node.js</option>
+                                <option>JavaScript</option>
+                                <option>RESTful API Development</option>
+                                <option>MongoDB</option>
+                                <option>Express.js</option>
+                                <option>Angular</option>
+                                <option>Node.js</option>
+                                <option>JavaScript</option>
+                                <option>Java</option>
+                                <option>Spring Framework</option>
+                                <option>Hibernate</option>
+                                <option>SQL</option>
+                                <option>Web Services (REST/SOAP)</option>
+                                <option>Version Control (e.g., Git)</option>
+                                <option>HTML</option>
+                                <option>CSS</option>
+                                <option>JavaScript</option>
+                                <option>React.js</option>
+                                <option>Angular</option>
+                                <option>Vue.js</option>
+                                <option>Java</option>
+                                <option>Python</option>
+                                <option>Node.js</option>
+                                <option>Databases (SQL/NoSQL)</option>
+                                <option>API Development</option>
+                                <option>Server Administration</option>
+                                <option>HTML</option>
+                                <option>CSS</option>
+                                <option>JavaScript</option>
+                                <option>React.js</option>
+                                <option>Node.js</option>
+                        </select>
+                        
+                    </div>
+                </div>
+
+                <div class="col-2 px-2 border border-1 d-flex align-items-center justify-content-center fs-5">
+                    Apply By
+                </div>
+                <input class="container-fluid border border-1 rounded-end" type="date" name="date" id="date" required>
+            </div>
+            <button type="submit" class=" mt-3 mb-5 container-fluid btn btn-success">Submit</button>
+        </form>
+
+
+    </div>
+</div>

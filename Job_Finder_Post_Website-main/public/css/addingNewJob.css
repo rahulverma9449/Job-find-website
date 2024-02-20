@@ -1,0 +1,21 @@
+
+
+.postJobBox{
+    box-shadow: -5px -5px 3px 0px black;
+    background-color: transparent;
+    /* height: 75vh; */
+    border-radius: 16px;
+    /* border: 2px solid black; */
+    border-right: none;
+    border-bottom: none;
+}
+
+/* Define the CSS class */
+
+
+/* Apply the CSS class when the element is focused */
+.outlineClass:focus {
+    box-shadow: 0 0 3px 2px blue;
+    border: none;
+    outline: none;
+}

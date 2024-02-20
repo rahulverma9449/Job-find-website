@@ -1,0 +1,115 @@
+<div class="container-fluid mx-0 px-0 d-flex justify-content-center">
+    <div class="row container detailViewBackground mt-2 mx-0 px-0 text-center">
+        <a href="https://www.codingninjas.com/" class="mb-0"><img src="/images/ViewDetailsBanner.png" class="mb-0"
+                style="max-width: 100%;" alt=""></a>
+
+        <% if (jobObj) {   %>
+            
+
+            <div class="jobHeading" style="color: green;">
+                <span style="color: #ff2c90; text-transform: uppercase;">
+                    <%= jobObj.tech %>
+                </span> opportunity in
+                <span style="color: green; text-transform: uppercase;">
+                    <%= jobObj.location %>
+                        <%= jobObj.mode %>
+                </span> at
+                <span style="color: #0dcaf0; text-transform: capitalize;">
+                    <%= jobObj.orgName %>
+                </span>
+            </div>
+
+            <div class=" mx-5 d-flex flex-column align-items-start">
+                <% if(locals.userEmail){%>
+                <div class="d-flex mx-2 my-2 align-items-center">
+                    <span class="text-bg-warning container-fluid border border-1 rounded-3 fs-3">
+                        <% if (jobObj.active) { %>
+                            <p class="activelyHiring">Actively Hiring
+                                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                    class="bi bi-graph-up-arrow"  viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M0 0h1v15h15v1H0V0Zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5Z" />
+                                </svg>
+                            </p>
+                            <% } else { %>
+                                <p class="activelyHiring">Not Actively Hiring
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor"
+                                        class="bi bi-graph-down-arrow"  viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd"
+                                            d="M0 0h1v15h15v1H0V0Zm10 11.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-4a.5.5 0 0 0-1 0v2.6l-3.613-4.417a.5.5 0 0 0-.74-.037L7.06 8.233 3.404 3.206a.5.5 0 0 0-.808.588l4 5.5a.5.5 0 0 0 .758.06l2.609-2.61L13.445 11H10.5a.5.5 0 0 0-.5.5Z" />
+                                    </svg>
+                                </p>
+                                <% } %>
+                    </span>
+                    <a href="/job/update/<%=jobObj.id%>" class="mx-2" ><svg style="color: blue;" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                        <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                        <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                      </svg></a>
+                    <a href="/delete/<%=jobObj.id%>" onclick="deleteProduct('<%= jobObj.id %>')" ><svg style="color: red;" xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-file-earmark-x" viewBox="0 0 16 16">
+                        <path d="M6.854 7.146a.5.5 0 1 0-.708.708L7.293 9l-1.147 1.146a.5.5 0 0 0 .708.708L8 9.707l1.146 1.147a.5.5 0 0 0 .708-.708L8.707 9l1.147-1.146a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146z"/>
+                        <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+                      </svg></a>
+                    
+                    
+                </div>
+                <%}%>
+                <span style="font-size: 1.5rem;">
+                    <%= jobObj.orgName %>
+                </span>
+                <span style="font-size: 1.2rem;">
+                    <%= jobObj.tech %>
+                </span>
+                <span class="mx-3" style="font-size: 1.2rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                    </svg>
+                    <%= jobObj.location %>
+                </span>
+                <span class="mx-3" style="font-size: 1.1rem;">&#8377; <%= jobObj.salary.first %>-<%=
+                            jobObj.salary.second %>
+                            lpa</span>
+                <span class="mx-3" style="font-size: 1.1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-hourglass-split" viewBox="0 0 16 16">
+                        <path
+                            d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1h-11zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2h-7zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48V8.35zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z" />
+                    </svg> Apply Bya
+                    <%= jobObj.applyDate %>
+                </span>
+                <span class="mx-3" style="font-size: 1.1rem;"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z" />
+                    </svg> Number of openinings <%= jobObj.numberOfOpenings %></span>
+                <span class="mx-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z" />
+                    </svg> <a href="/job/applicants/<%=jobId%>" class=" "
+                        style="text-decoration: none; font-size: 1.1rem; color: #cd1068;">Applicants
+                        <% if (jobObj.applicants.length===0) { %>
+                            0
+                            <% } else { %>
+                                <%= jobObj.applicants.length %>
+                                    <% } %>
+                    </a> </span>
+                <div class="d-flex justify-content-around flex-wrap mx-2">
+                    <% jobObj.skills.forEach((skill)=> { %>
+                        <div class="skill mt-2 mx-1">
+                            <%= skill %>
+                        </div>
+                        <% }) %>
+                </div>
+                <!-- // This line need to be fix -->
+
+
+                <!-- <a href="/job/1/apply" class="ApplyButton mx-2">Apply Now</a> -->
+                <a href="/job/<%= jobObj.id %>/apply" class="ApplyButton mx-2">Apply Now</a>
+                <div class="postTime">Posted <%= jobObj.postedTime%>
+                </div>
+            </div>
+            <% } %>
+
+
+    </div>
+</div>

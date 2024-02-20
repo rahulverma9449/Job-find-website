@@ -1,0 +1,55 @@
+
+#mynav {
+    background-color: #181642 !important;
+    color: white !important;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 1px 10px;
+    /* margin-bottom: ; */
+}
+
+.background{
+    /* color: #ff2c90 !important; */
+    color: #fff;
+    background-color: #181642 !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.firstHeading{
+    font-size: 2.8rem;
+    color: #ff2c90;
+}
+
+.animatedPara{
+    font-size: 1.8rem;
+    font-weight: 200;
+    letter-spacing:2px;
+    margin-bottom: 0.5rem;
+}
+
+.discoverHire{
+    font-size: 1.3rem;
+    word-spacing: 2px;
+    font-weight: 200;
+    margin-bottom: 0.3rem;
+
+
+}
+
+.buttonTag{
+    font-size: 1.5rem !important;
+    background-color: #ff2c90 !important;
+    color: #fff !important;
+    border: none !important;
+}
+.buttonTag:hover{
+    
+    background-color: #cd1068 !important;
+    
+}
+.custonFontSizePara{
+    font-size: 1.1rem !important;
+}
+.custonFontSizeParaLogo{
+    font-size: 1.3rem !important;
+}
+
+

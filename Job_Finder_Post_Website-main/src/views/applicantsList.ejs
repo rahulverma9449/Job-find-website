@@ -1,0 +1,42 @@
+<div class="container d-flex justify-content-center">
+  <div class="container-fluid mt-2 ">
+    <div>
+      <table class="table table-striped">
+        <thead class=" fw-500">
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>Resume</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% if(applications.length>0) { applications.forEach(application=>{ %>
+
+            <tr>
+              <td class="p-2">1</td>
+              <td class="p-2">
+                <%=application.name%>
+              </td>
+              <td class="p-2">
+                <%=application.email%>
+              </td>
+              <td class="p-2">
+                <%=application.contact%>
+              </td>
+              <!-- <p>Debug: <%= encodeURI(application.url) %></p> -->
+
+              <td class="p-2"><a href="/<%=encodeURI(application.url)%>" class="btn btn-primary" target="_blank">View</a></td>
+              <!-- <td class="p-2"><a href="/documents/1696852935480-Faizan Ahmadre.pdf%>"  target="_blank">View</a></td> -->
+
+            </tr>
+            <% }) } %>
+        </tbody>
+      </table>
+
+
+
+    </div>
+  </div>
+</div>
